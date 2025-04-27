@@ -11,3 +11,28 @@ IDE: PyCharm
 Language: SQL  
 Database: PostgreSQL   
 * Dataset provided by Maven Analytics.
+
+### Objective 1
+
+1. How many schools produced MLB players in each decade?
+```sql
+SELECT
+    ROUND(yearid, -1) AS decade,
+    COUNT(DISTINCT schoolid) AS school_count
+FROM schools
+GROUP BY decade
+ORDER BY decade DESC;
+```
+Results (sample)
+| decade | school\_count |
+| :--- | :--- |
+| 2010 | 196 |
+| 2000 | 467 |
+| 1990 | 500 |
+| 1980 | 441 |
+| 1970 | 366 |
+| 1960 | 230 |
+| 1950 | 147 |
+| 1940 | 159 |
+| 1930 | 178 |
+| 1920 | 193 |
