@@ -1,5 +1,5 @@
 # Mlb
-Using advanced querying techniques, track how player statistics have changed over time and across different teams in the league.
+Using advanced querying techniques, track how player statistics have changed over time and across different teams in the league.  
 Main objectives:  
 1. What schools do mlb players attend?
 2. How much do teams spend on player salaries?
