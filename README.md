@@ -36,3 +36,24 @@ Results (sample)
 | 1940 | 159 |
 | 1930 | 178 |
 | 1920 | 193 |
+
+2. What are the names of the top 5 schools that produced the most players?
+```sql
+SELECT
+    sd.name_full AS school_name,
+    COUNT(DISTINCT playerid) AS players_count
+FROM schools s
+LEFT JOIN school_details sd
+    ON s.schoolid = sd.schoolid
+GROUP BY school_name
+ORDER BY players_count DESC
+LIMIT 5;
+```
+Results  
+| school\_name | players\_count |
+| :--- | :--- |
+| University of Texas at Austin | 107 |
+| University of Southern California | 105 |
+| Arizona State University | 101 |
+| Stanford University | 86 |
+| University of Michigan | 76 |
